@@ -60,13 +60,13 @@ windowContainer.innerHTML = `
   <div class ='right-side-bar'>
     <div class="details">
       <div class="left-block">
-        <p> Fuel: titanium </p>
-        <p>Weight: 400</p>
+        <p> Capital: Capital </p>
+        <p>Country Code: 93</p>
     </div>
 
       <div class="right-block">
-        <p>Length: 10,000</p>
-        <p>Power: 20,000</p>
+        <p>Area: 10,000</p>
+        <p>Continent: Africa</p>
       </div>
     </div>
 
