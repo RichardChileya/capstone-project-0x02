@@ -37,6 +37,13 @@ header h2 {
 .like {
   width: 40px;
   height: 40px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.like:active {
+  width: 50px;
+  height: 50px;
 }
 
 .likes {
@@ -46,7 +53,7 @@ header h2 {
 .img-holder {
   height: 180px;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 100% 100%;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 }
@@ -84,7 +91,7 @@ li {
   gap: 0.8rem;
   background-color: hsl(209, 23%, 22%);
   border-radius: 8px;
-  width: 280px;
+  width: 300px;
 }
 
 .comment-btn {
