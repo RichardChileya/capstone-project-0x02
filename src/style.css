@@ -44,7 +44,6 @@ header h2 {
 }
 
 .img-holder {
-  width: 280px;
   height: 180px;
   background-repeat: no-repeat;
   background-size: contain;
@@ -95,10 +94,10 @@ li {
   font-size: 1rem;
   letter-spacing: 2px;
   box-shadow: 1px 1.5px 3px #000;
-  background-color: hsl(207, 26%, 17%);
+  background-color: hsl(207, 36%, 37%);
   align-self: center;
   border-radius: 5%;
-  color: gray;
+  color: #fff;
   position: relative;
   bottom: 0;
 }
@@ -137,5 +136,5 @@ input {
   background-repeat: no-repeat;
   background-position: 3% center;
   padding-left: 50px;
-  background-color: hsl(207, 23%, 22%);
+  background-color: #fff;
 }
