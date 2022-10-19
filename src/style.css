@@ -47,7 +47,7 @@ header h2 {
   width: 280px;
   height: 180px;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 }
@@ -81,10 +81,11 @@ ul {
 li {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 0.8rem;
   background-color: hsl(209, 23%, 22%);
   border-radius: 8px;
-  width: 300px;
+  width: 280px;
 }
 
 .comment-btn {
@@ -98,6 +99,8 @@ li {
   align-self: center;
   border-radius: 5%;
   color: gray;
+  position: relative;
+  bottom: 0;
 }
 
 article h2 {

@@ -8,7 +8,7 @@ import countries from './modules/countries.js';
 const ul = document.querySelector('ul');
 
 console.log(countries);
-for (let i = 30; i < 42; i++) {
+for (let i = 0; i < 12; i++) {
   const htmlText = `
   <li>
     <div class="img-holder"></div>
@@ -39,5 +39,5 @@ document.querySelectorAll('.like').forEach(element => {
 console.log(countries[38]);
 
 document.querySelectorAll('.img-holder').forEach((val, index) => {
-  val.style.backgroundImage = `url(${countries[index + 88].flags.png})`
+  val.style.backgroundImage = `url(${countries[index].flags.svg})`
 })
