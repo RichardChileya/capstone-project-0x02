@@ -136,3 +136,72 @@ input {
   padding-left: 50px;
   background-color: hsl(207, 23%, 22%);
 }
+
+#popup-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.popup-window {
+  top: 15px;
+  padding: 10px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(26, 33, 62);
+  position: absolute;
+  width: 80%;
+  align-self: center;
+  left: 80px;
+}
+
+.side-bars {
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+  width: 100%;
+  padding: 40px;
+}
+
+.details  {
+  display: flex;
+  justify-content: space-between;
+  gap: 45px;
+  padding: 20px;
+}
+
+.comment-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 10px;
+}
+
+#form {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.fa-x {
+  display: flex;
+  position: absolute;
+  padding-right: 10px;
+  top: 5;
+  font-size: 30px;
+  font-weight: 1000;
+  margin-bottom: 10px;
+  align-self: flex-end;
+}
+
+.fa-x:hover {
+  color: red;
+}
