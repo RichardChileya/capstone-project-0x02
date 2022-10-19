@@ -8,7 +8,7 @@ import countries from './modules/countries.js';
 const ul = document.querySelector('ul');
 
 console.log(countries);
-for (let i = 0; i < 12; i++) {
+for (let i = 30; i < 42; i++) {
   const htmlText = `
   <li>
     <div class="img-holder"></div>

@@ -84,6 +84,7 @@ li {
   gap: 0.8rem;
   background-color: hsl(209, 23%, 22%);
   border-radius: 8px;
+  width: 300px;
 }
 
 .comment-btn {
