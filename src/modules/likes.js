@@ -1,5 +1,5 @@
 const addLike = async (ele) => {
-  const num = ele.nextSibling.nextSibling.textContent[0];
+  const num = ele.nextSibling.nextSibling.textContent.split(' ')[0];
   ele.nextSibling.nextSibling.textContent = ''.concat(+num + 1, ' likes');
   await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/mxaGcXNlcZdj65Ijfypb/likes', {
     method: 'POST',

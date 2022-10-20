@@ -4,9 +4,8 @@ const section = document.querySelector('#popup-section');
 const modal = async (i, windowContainer, countries) => {
   windowContainer.innerHTML = ` 
 
-  <i class="fa-solid fa-x">X</i>
+<i class="fa-solid fa-x">X</i>
 
- 
 <div class = 'side-bars'>
 
   <div class ='left-side-bar'>
@@ -55,20 +54,17 @@ const modal = async (i, windowContainer, countries) => {
 
   </div>
   
-  
 `;
   section.appendChild(windowContainer);
 
-
   let body = '';
   const comments = await getComment(`f${i}`);
-  
+
   if (Array.isArray(comments)) {
     comments.forEach((o) => {
       body += `<p>${o.creation_date} ${o.username}: ${o.comment}</p>`;
     });
   }
-
 
   document.querySelector('.comment-body').innerHTML = body;
   const form = document.getElementById(`f${i}`);
@@ -86,7 +82,6 @@ const modal = async (i, windowContainer, countries) => {
   });
 
   const exitBtn = document.querySelector('.fa-x');
- 
   exitBtn.addEventListener('click', () => {
     windowContainer.style.display = 'none';
     section.removeChild(windowContainer);
