@@ -30,6 +30,6 @@ const popWindow = document.querySelectorAll('.comment-btn');
 popWindow.forEach((element) => {
   element.addEventListener('click', () => {
     modal(element.id[1], windowContainer, countries);
-    windowContainer.style.display = 'flex';
+    windowContainer.style.display = 'grid';
   });
 });

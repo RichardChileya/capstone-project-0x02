@@ -12,7 +12,7 @@ const modal = async (i, windowContainer, countries) => {
       <h2 class="title">${countries[i].name}</h2>
     </div>
 
-    <div class ='right-side-bar'>
+
       <article class="right-block">
         <h3> Native name:<span> ${countries[i].nativeName}</span></h3>
         <h3> Languages:<span> ${countries[i].languages[0].name}</span></h3>
@@ -28,16 +28,16 @@ const modal = async (i, windowContainer, countries) => {
         <h3> Time-Zome: <span>${countries[i].timezones}</span></h3>
         <h3 class="borders">Borders: <span>${countries[i].borders}</span></h3>
       </article>
-    </div> 
+
   </section>   
 
   <section class="comment-details">
-    <div class="form-div"
+    <div class="form-div">
       <form id="f${i}" class='form' action="">
       <h2>Please Leave a comment</h2>
         <div class = 'error-msg'> </div>
         <input id = 'name-input' type="text" placeholder="Your Name" >
-        <textarea name=" message" id="msg-input" cols="30" rows="10" placeholder="Your insights"></textarea>
+        <textarea name=" message" id="msg-input" cols="28" rows="5" placeholder="Your insights"></textarea>
         <button class="comment-btn" type="submit">Comment</button>
       </form>
     </div>
@@ -46,7 +46,7 @@ const modal = async (i, windowContainer, countries) => {
           <h2>Comments</h2>
 
           <span class="comment-body">
-            <p>NO COMMENT ENTERED</p>
+            <p>No Comments...</p>
           </span>
         </div>
       </div>
@@ -56,7 +56,6 @@ const modal = async (i, windowContainer, countries) => {
   
 `;
   section.appendChild(windowContainer);
-
   let body = '';
   const comments = await getComment(`f${i}`);
 
@@ -66,9 +65,12 @@ const modal = async (i, windowContainer, countries) => {
     });
   }
 
-  document.querySelector('.comment-body').innerHTML = body;
+  if (body != '') {
+    document.querySelector('.comment-body').innerHTML = body;
+  }
   const form = document.getElementById(`f${i}`);
   const error = document.querySelector('.error-msg');
+
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const nameInput = document.querySelector('#name-input').value;
@@ -78,7 +80,9 @@ const modal = async (i, windowContainer, countries) => {
       form.reset();
       return;
     }
+
     await addComment(form.id, nameInput, msgInput);
+    console.log('fff');
     form.reset();
     const cmt = await getComment(`f${i}`);
     const last = cmt[cmt.length - 1];

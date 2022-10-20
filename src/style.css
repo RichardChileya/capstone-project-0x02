@@ -76,7 +76,7 @@ article h2 {
   margin-bottom: 0.5rem;
   font-weight: 600;
 }
-
+ 
 #countries h2 {
   padding-bottom: 2px;
   border-bottom: 3px solid gray;
@@ -166,20 +166,19 @@ footer {
 }
 
 .popup-window {
-  top: 15px;
-  padding: 10px;
+  top: 20%;
+  left: 20%;
+  right: 20%;
+  bottom: 15%;
   display: none;
-  flex-direction: column;
-  align-items: center;
-  background-color: hsl(207, 26%, 17%);
-  position: absolute;
-  width: 80%;
-  align-self: center;
-  left: 80px;
+  grid-template-rows: 1fr 1fr 1fr;
+  background-color: hsl(209, 23%, 22%);
+  position: fixed;
 }
 
 .img-side-bar {
-  display: flex;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
   justify-content: space-between;
   align-items: center;
   gap: 50px;
@@ -200,6 +199,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 3px;
 }
 
 .right-side-bar {
@@ -213,10 +213,12 @@ footer {
 }
 
 .comment-details {
-  display: flex;
-  align-items: center;
-  width: 80%;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  column-gap: 3rem;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .comment-body {
@@ -224,27 +226,38 @@ footer {
   flex-direction: column;
   gap: 10px;
   margin: 10px;
+  text-align: left;
 }
 
 .form {
   margin: 15px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  align-items: flex-start;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
   border: #fff 1px solid;
   padding: 10px;
 }
 
+.form button {
+  width: 30%;
+}
+
+.form input,
+textarea {
+  padding: 1% 2%;
+  border-radius: 3px;
+}
+
 .fa-x {
-  display: flex;
   position: absolute;
   padding-right: 10px;
   top: 5px;
+  right: 5px;
   font-size: 30px;
   font-weight: 1000;
   margin-bottom: 10px;
-  align-self: flex-end;
 }
 
 .fa-x:hover {
@@ -252,7 +265,7 @@ footer {
 }
 
 .popUp-img {
-  width: 300px;
+  width: 80%;
   height: 180px;
   background-color: #fff;
 }
