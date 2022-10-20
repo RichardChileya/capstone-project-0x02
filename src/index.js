@@ -8,9 +8,7 @@ import countries from './modules/countries.js';
 
 const ul = document.querySelector('ul');
 
-// console.log(countries);
-// eslint-disable-next-line no-plusplus
-for (let i = 0; i < 12; i++) {
+for (let i = 0; i < 12; i += 1) {
   const htmlText = `
   <li>
     <div class="img-holder"></div>

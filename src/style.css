@@ -44,10 +44,9 @@ header h2 {
 }
 
 .img-holder {
-  width: 280px;
   height: 180px;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 }
@@ -86,10 +85,11 @@ article h2 {
 li {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 0.8rem;
   background-color: hsl(209, 23%, 22%);
   border-radius: 8px;
-  width: 300px;
+  width: 280px;
 }
 
 .comment-btn {
@@ -99,10 +99,12 @@ li {
   font-size: 1rem;
   letter-spacing: 2px;
   box-shadow: 1px 1.5px 3px #000;
-  background-color: hsl(207, 26%, 17%);
+  background-color: hsl(207, 36%, 37%);
   align-self: center;
   border-radius: 5%;
-  color: gray;
+  color: #fff;
+  position: relative;
+  bottom: 0;
 }
 
 article h3 {
@@ -240,4 +242,5 @@ footer {
 .popUp-img {
   width: 400px;
   height: 400px;
+  background-color: #fff;
 }
