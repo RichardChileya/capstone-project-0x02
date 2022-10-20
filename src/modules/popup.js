@@ -1,5 +1,4 @@
 import { addComment, getComment } from './comment.js';
-import commentCounter from './commentCount.js';
 
 const section = document.querySelector('#popup-section');
 const modal = async (i, windowContainer, countries) => {
@@ -47,7 +46,7 @@ const modal = async (i, windowContainer, countries) => {
           <h2>Comments</h2>
 
           <span class="comment-body">
-            <span>No Comments...</span>
+            <p>No Comments...</p>
           </span>
         </div>
       </div>
@@ -59,7 +58,6 @@ const modal = async (i, windowContainer, countries) => {
   section.appendChild(windowContainer);
   let body = '';
   const comments = await getComment(`f${i}`);
-  const h2 = document.querySelector('.comment-div h2');
 
   if (Array.isArray(comments)) {
     comments.forEach((o) => {
@@ -67,14 +65,12 @@ const modal = async (i, windowContainer, countries) => {
     });
   }
 
-  if (body !== '') {
+  if (body != '') {
     document.querySelector('.comment-body').innerHTML = body;
   }
   const form = document.getElementById(`f${i}`);
   const error = document.querySelector('.error-msg');
-  const cmtvalue = commentCounter();
 
-  h2.textContent += ` ( ${cmtvalue} )`;
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const nameInput = document.querySelector('#name-input').value;
@@ -86,12 +82,12 @@ const modal = async (i, windowContainer, countries) => {
     }
 
     await addComment(form.id, nameInput, msgInput);
+    console.log('fff');
     form.reset();
     const cmt = await getComment(`f${i}`);
     const last = cmt[cmt.length - 1];
     body += `<p>${last.creation_date} ${last.username}: ${last.comment}</p>`;
     document.querySelector('.comment-body').innerHTML = body;
-    h2.textContent = ` Comments ( ${cmtvalue + 1} )`;
   });
 
   const exitBtn = document.querySelector('.fa-x');
