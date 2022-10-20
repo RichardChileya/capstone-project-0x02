@@ -149,6 +149,10 @@ footer {
   background-color: #fff;
 }
 
+#search {
+  background-color: #fff;
+}
+
 /* Pop up Code  */
 #popup-section {
   display: flex;
