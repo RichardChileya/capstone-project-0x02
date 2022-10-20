@@ -7,8 +7,7 @@ import countries from './modules/countries.js';
 
 const ul = document.querySelector('ul');
 
-console.log(countries);
-for (let i = 0; i < 12; i++) {
+for (let i = 0; i < 12; i += 1) {
   const htmlText = `
   <li>
     <div class="img-holder"></div>
@@ -25,19 +24,17 @@ for (let i = 0; i < 12; i++) {
     </section>
     <button type="button" class="comment-btn">Comments</button>
   </li>
-  `
+  `;
   ul.insertAdjacentHTML('beforeend', htmlText);
 }
 
 document.getElementById('logo').src = logoImage;
-document.getElementById('search').style.backgroundImage =  `url(${icon})`;
+document.getElementById('search').style.backgroundImage = `url(${icon})`;
 
-document.querySelectorAll('.like').forEach(element => {
+document.querySelectorAll('.like').forEach((element) => {
   element.src = likeImage;
 });
 
-console.log(countries[38]);
-
 document.querySelectorAll('.img-holder').forEach((val, index) => {
-  val.style.backgroundImage = `url(${countries[index].flags.svg})`
-})
+  val.style.backgroundImage = `url(${countries[index].flags.svg})`;
+});
