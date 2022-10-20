@@ -62,7 +62,7 @@ ul {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   margin: 0 auto;
-  /* gap: 4rem 3.5rem; */
+  gap: 4rem 3.5rem;
 }
 
 #countries {
