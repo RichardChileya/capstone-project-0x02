@@ -12,7 +12,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  font-family: 'Nunito Sans' sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   background-color: hsl(207, 26%, 17%);
   color: hsl(0, 0%, 100%);
 }
@@ -112,6 +112,7 @@ article h3 {
   font-size: 16px;
   line-height: 23px;
 }
+
 article span {
   font-weight: 300;
   font-size: 14px;
