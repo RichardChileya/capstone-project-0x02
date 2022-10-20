@@ -62,7 +62,7 @@ ul {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   margin: 0 auto;
-  gap: 4rem 3.5rem;
+  /* gap: 4rem 3.5rem; */
 }
 
 #countries {
@@ -146,7 +146,7 @@ footer {
   background-repeat: no-repeat;
   background-position: 3% center;
   padding-left: 50px;
-  background-color: hsl(207, 23%, 22%);
+  background-color: #fff;
 }
 
 /* Pop up Code  */
