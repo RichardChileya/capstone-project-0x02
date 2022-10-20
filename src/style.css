@@ -126,7 +126,8 @@ footer {
   padding: 1rem 0;
 }
 
-input {
+.button1,
+#search {
   width: 30%;
   padding: 0.7% 2.5%;
   border-radius: 8px;
@@ -138,10 +139,16 @@ input {
   background-color: hsl(207, 23%, 22%);
 }
 
+/* Pop up Code  */
 #popup-section {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+#name-input {
+  width: 20em;
+  height: 2rem;
 }
 
 .popup-window {
@@ -150,7 +157,7 @@ input {
   display: none;
   flex-direction: column;
   align-items: center;
-  background-color: rgb(26, 33, 62);
+  background-color: hsl(207, 26%, 17%);
   position: absolute;
   width: 80%;
   align-self: center;
@@ -160,21 +167,33 @@ input {
 .side-bars {
   display: flex;
   justify-content: space-between;
-  gap: 100px;
-  width: 100%;
+  gap: 50px;
+  width: 90%;
   padding: 40px;
 }
 
 .details {
   display: flex;
-  justify-content: space-between;
-  gap: 45px;
+  text-align: justify;
+  gap: 50px;
   padding: 20px;
+}
+
+.left-block,
+.right-block {
+  text-align: left;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  width: 100%;
 }
 
 .comment-details {
   display: flex;
   flex-direction: column;
+  margin-top: 10rem;
+  align-items: center;
 }
 
 .comment-body {
@@ -184,12 +203,14 @@ input {
   margin: 10px;
 }
 
-#form {
-  margin: 20px;
+.form {
+  margin: 15px;
   display: flex;
   flex-direction: column;
   gap: 20px;
   align-items: flex-start;
+  border: #fff 1px solid;
+  padding: 10px;
 }
 
 .fa-x {
@@ -205,4 +226,18 @@ input {
 
 .fa-x:hover {
   color: red;
+}
+
+#comment-btn {
+  display: block;
+  color: blue;
+  background-color: aqua;
+  width: 12rem;
+  height: 2rem;
+  font-size: 18px;
+}
+
+.popUp-img {
+  width: 400px;
+  height: 400px;
 }
