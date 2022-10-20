@@ -69,16 +69,21 @@ const modal = async (i, windowContainer, countries) => {
   document.querySelector('.comment-body').innerHTML = body;
   const form = document.getElementById(`f${i}`);
   const error = document.querySelector('.error-msg');
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const nameInput = document.querySelector('#name-input').value;
     const msgInput = document.querySelector('#msg-input').value;
     if (nameInput === '' || msgInput === '') {
       error.innerHTML = 'Please fill the fields';
       form.reset();
+      return;
     }
-    addComment(form.id, nameInput, msgInput);
+    await addComment(form.id, nameInput, msgInput);
     form.reset();
+    const cmt = await getComment(`f${i}`);
+    const last = cmt[cmt.length - 1];
+    body += `<p>${last.creation_date} ${last.username}: ${last.comment}</p>`;
+    document.querySelector('.comment-body').innerHTML = body;
   });
 
   const exitBtn = document.querySelector('.fa-x');

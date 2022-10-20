@@ -1,7 +1,7 @@
 const addLike = async (ele) => {
   const num = ele.nextSibling.nextSibling.textContent.split(' ')[0];
   ele.nextSibling.nextSibling.textContent = ''.concat(+num + 1, ' likes');
-  await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/mxaGcXNlcZdj65Ijfypb/likes', {
+  await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/UMu2QAb36PVSa0I3N71m/likes', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -13,7 +13,7 @@ const addLike = async (ele) => {
 };
 
 const promise = async () => {
-  const re = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/mxaGcXNlcZdj65Ijfypb/likes', {
+  const re = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/UMu2QAb36PVSa0I3N71m/likes', {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
