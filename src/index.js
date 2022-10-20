@@ -1,5 +1,6 @@
 import './style.css';
-
+import { getLikesCount } from './modules/likes.js';
+import modal from './modules/popup.js';
 import logoImage from './images/globe.png';
 import likeImage from './images/hearts.png';
 import icon from './images/search.png';
@@ -18,11 +19,11 @@ for (let i = 0; i < 12; i += 1) {
         <h3>Capital: <span>${countries[i].capital}</span></h3>
       </article>
       <div>
-        <img src="" class="like" alt="heart">
-        <p class="likes">5 likes</p>
+        <img src="" id="${`l${i}`}" class="like" alt="heart">
+        <p class="likes">${getLikesCount(`l${i}`)} likes</p>
       </div>
     </section>
-    <button type="button" class="comment-btn">Comments</button>
+    <button type="button" id="${`c${i}`}" class="comment-btn">Comments</button>
   </li>
   `;
   ul.insertAdjacentHTML('beforeend', htmlText);
@@ -36,5 +37,18 @@ document.querySelectorAll('.like').forEach((element) => {
 });
 
 document.querySelectorAll('.img-holder').forEach((val, index) => {
-  val.style.backgroundImage = `url(${countries[index].flags.svg})`;
+  val.style.backgroundImage = `url(${countries[index].flags.png})`;
+});
+
+const windowContainer = document.createElement('div');
+windowContainer.className = 'popup-window';
+
+const popWindow = document.querySelectorAll('.comment-btn');
+
+popWindow.forEach((element) => {
+  element.addEventListener('click', () => {
+    // console.log(element.id);
+    modal(element.id[1], windowContainer, countries);
+    windowContainer.style.display = 'flex';
+  });
 });
