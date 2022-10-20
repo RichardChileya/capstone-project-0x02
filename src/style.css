@@ -76,7 +76,7 @@ article h2 {
   margin-bottom: 0.5rem;
   font-weight: 600;
 }
- 
+
 #countries h2 {
   padding-bottom: 2px;
   border-bottom: 3px solid gray;
@@ -166,10 +166,12 @@ footer {
 }
 
 .popup-window {
-  top: 20%;
+  top: 5%;
   left: 20%;
   right: 20%;
-  bottom: 15%;
+
+  /* bottom: 5%; */
+  height: 90%;
   display: none;
   grid-template-rows: 1fr 1fr 1fr;
   background-color: hsl(209, 23%, 22%);
