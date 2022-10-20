@@ -1,5 +1,4 @@
 import './style.css';
-import { getLikesCount } from './modules/likes.js';
 import modal from './modules/popup.js';
 import logoImage from './images/globe.png';
 import likeImage from './images/hearts.png';
