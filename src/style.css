@@ -169,7 +169,7 @@ footer {
   top: 15%;
   left: 20%;
   right: 20%;
-  height: 70%;
+  height: 80%;
   display: none;
   grid-template-rows: 1fr 1fr 1fr;
   background-color: hsl(209, 23%, 22%);
@@ -228,7 +228,7 @@ footer {
   gap: 10px;
   margin: 10px;
   text-align: left;
-  height: 60%;
+  height: 50%;
   overflow-y: scroll;
 }
 
