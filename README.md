@@ -13,8 +13,8 @@
 
 ## Live Demo (if available)
 
-[Live Demo Link](https://arabiu033.github.io/capstone-project-0x02/)
-[Poject Video](https://drive.google.com/file/d/1praAaL6hxvrLAlWzsqNwjjRe_W2SfoZ2/view?usp=sharing)
+## [Live Demo Link](https://arabiu033.github.io/capstone-project-0x02/)
+## [Poject Video](https://drive.google.com/file/d/1praAaL6hxvrLAlWzsqNwjjRe_W2SfoZ2/view?usp=sharing)
 
 
 ## Getting Started
