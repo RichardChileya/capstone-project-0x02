@@ -76,8 +76,8 @@ article h2 {
   margin-bottom: 0.5rem;
   font-weight: 600;
 }
- 
-#countries h2 cd {
+
+#countries h2 {
   padding-bottom: 2px;
   border-bottom: 3px solid gray;
   font-size: 25px;
@@ -166,14 +166,15 @@ footer {
 }
 
 .popup-window {
-  top: 20%;
+  top: 15%;
   left: 20%;
   right: 20%;
-  bottom: 15%;
+  height: 70%;
   display: none;
   grid-template-rows: 1fr 1fr 1fr;
   background-color: hsl(209, 23%, 22%);
   position: fixed;
+  backdrop-filter: blur(10px);
 }
 
 .img-side-bar {
@@ -236,7 +237,6 @@ footer {
   gap: 10px;
   align-items: center;
   justify-content: center;
-  border: #fff 1px solid;
   padding: 10px;
 }
 
