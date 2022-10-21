@@ -1,4 +1,4 @@
-import itemsCounter from './itemsCount.js';
+import ItemsCount from './itemsCount.js';
 
 const h2 = document.querySelector('#countries h2');
 const populate = (ul, countries, getLikesCount) => {
@@ -23,7 +23,7 @@ const populate = (ul, countries, getLikesCount) => {
     ul.insertAdjacentHTML('beforeend', htmlText);
   }
 
-  const count = itemsCounter();
+  const count = ItemsCount.itemsCounter();
   h2.textContent = `Short Lists Of Countries (${count})`;
 };
 
