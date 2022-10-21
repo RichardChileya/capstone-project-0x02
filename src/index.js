@@ -29,6 +29,8 @@ const popWindow = document.querySelectorAll('.comment-btn');
 
 popWindow.forEach((element) => {
   element.addEventListener('click', () => {
+    document.body.style.overflowY = 'hidden';
+    ul.style.filter = 'blur(5px)';
     modal(element.id[1], windowContainer, countries);
     windowContainer.style.display = 'grid';
   });
