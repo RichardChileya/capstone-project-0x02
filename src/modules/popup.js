@@ -1,5 +1,5 @@
 import { addComment, getComment } from './comment.js';
-import commentCounter from './commentCount.js';
+import Count from './commentCount.js';
 
 const section = document.querySelector('#popup-section');
 const modal = async (i, windowContainer, countries) => {
@@ -72,7 +72,7 @@ const modal = async (i, windowContainer, countries) => {
   }
   const form = document.getElementById(`f${i}`);
   const error = document.querySelector('.error-msg');
-  const cmtvalue = commentCounter();
+  const cmtvalue = Count.commentCounter();
 
   h2.textContent += ` ( ${cmtvalue} )`;
   form.addEventListener('submit', async (e) => {
