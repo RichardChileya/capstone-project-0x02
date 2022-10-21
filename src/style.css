@@ -229,6 +229,8 @@ footer {
   gap: 10px;
   margin: 10px;
   text-align: left;
+  height: 60%;
+  overflow-y: scroll;
 }
 
 .form {
