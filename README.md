@@ -1,7 +1,7 @@
 # Project Title : Capstone Project 2 
   This is a simple API integration project displaying a list of countries and its information fetching data using API
   The project is bundled using webpack and makes use of dynamic code through Javascript. the project makes use of jest for unit testing.
-  ![Home](../../../../../Pictures/home.png)![PopUp-window](../../../../../Pictures/pop-up.png)
+  ![](../../../../../Pictures/home.png)![](../../../../../Pictures/pop-up.png)
 ## Built With
 - CSS
 - HTML
