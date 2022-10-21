@@ -4,7 +4,7 @@
 test('test for three items added', () => {
   document.body.innerHTML = `
     <ul><ul>
-  `
+  `;
   const ItemsCount = require('./itemsCount.js');
   const ul = document.querySelector('ul');
   ul.innerHTML = `
@@ -28,12 +28,12 @@ test('test for three items added', () => {
   `;
 
   expect(ItemsCount.itemsCounter()).toBe(3);
-})
+});
 
 test('test for zero items', () => {
   document.body.innerHTML = `
     <ul><ul>
-  `
+  `;
   const ItemsCount = require('./itemsCount.js');
   const ul = document.querySelector('ul');
   ul.innerHTML = `
@@ -41,4 +41,4 @@ test('test for zero items', () => {
   `;
 
   expect(ItemsCount.itemsCounter()).toBe(0);
-})
+});
