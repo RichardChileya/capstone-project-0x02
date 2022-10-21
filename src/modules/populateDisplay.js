@@ -1,3 +1,6 @@
+import itemsCounter from './itemsCount.js';
+
+const h2 = document.querySelector('#countries h2');
 const populate = (ul, countries, getLikesCount) => {
   for (let i = 0; i < 12; i += 1) {
     const htmlText = `
@@ -19,6 +22,9 @@ const populate = (ul, countries, getLikesCount) => {
     `;
     ul.insertAdjacentHTML('beforeend', htmlText);
   }
+
+  const count = itemsCounter();
+  h2.textContent = `Short Lists Of Countries (${count})`;
 };
 
 export default populate;

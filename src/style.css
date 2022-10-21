@@ -166,16 +166,15 @@ footer {
 }
 
 .popup-window {
-  top: 5%;
+  top: 15%;
   left: 20%;
   right: 20%;
-
-  /* bottom: 5%; */
-  height: 90%;
+  height: 70%;
   display: none;
   grid-template-rows: 1fr 1fr 1fr;
   background-color: hsl(209, 23%, 22%);
   position: fixed;
+  backdrop-filter: blur(10px);
 }
 
 .img-side-bar {
@@ -240,7 +239,6 @@ footer {
   gap: 10px;
   align-items: center;
   justify-content: center;
-  border: #fff 1px solid;
   padding: 10px;
 }
 
