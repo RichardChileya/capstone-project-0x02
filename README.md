@@ -2,7 +2,8 @@
   This is a simple API integration project displaying a list of countries and its information fetching data using API
   The project is bundled using webpack and makes use of dynamic code through Javascript. the project makes use of jest for unit testing.
   ![](../../../../../Pictures/home.png)
-  ![](../../../../../Pictures/pop-up.png)
+  ![pop-up](https://user-images.githubusercontent.com/51260559/197199812-391cc65f-824c-40cc-8aa8-ee5c7778bc70.png)
+
 ## Built With
 - CSS
 - HTML
