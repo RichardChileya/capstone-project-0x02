@@ -98,6 +98,8 @@ const modal = async (i, windowContainer, countries) => {
   exitBtn.addEventListener('click', () => {
     windowContainer.style.display = 'none';
     section.removeChild(windowContainer);
+    document.body.style.overflowY = 'scroll';
+    document.querySelector('ul').style.filter = 'none';
   });
 };
 

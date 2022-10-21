@@ -1,11 +1,11 @@
 /** @jest-environment jsdom */
-/* eslint-disable global-require */
+const Count = require('./commentCount.js');
+
 test('test for comment count', () => {
   document.body.innerHTML = `
   <span class="comment-body">
       <span>No Comments...</span>
   </span>`;
-  const Count = require('./commentCount.js');
 
   const body = document.querySelector('.comment-body');
   body.innerHTML = `
@@ -23,7 +23,6 @@ test('test for no comments', () => {
   <span class="comment-body">
       <span>No Comments...</span>
   </span>`;
-  const Count = require('./commentCount.js');
 
   expect(Count.commentCounter()).toBe(0);
 });

@@ -1,11 +1,11 @@
 /** @jest-environment jsdom */
-/* eslint-disable global-require */
+const ItemsCount = require('./itemsCount.js');
 
 test('test for three items added', () => {
   document.body.innerHTML = `
     <ul><ul>
   `;
-  const ItemsCount = require('./itemsCount.js');
+
   const ul = document.querySelector('ul');
   ul.innerHTML = `
     <li>
@@ -34,7 +34,7 @@ test('test for zero items', () => {
   document.body.innerHTML = `
     <ul><ul>
   `;
-  const ItemsCount = require('./itemsCount.js');
+
   const ul = document.querySelector('ul');
   ul.innerHTML = `
 
